@@ -64,16 +64,7 @@ namespace BookApp.Data
              $"'%{search}%'", null, commandType: CommandType.Text));
          return totAuthor;
       }
-      /*
-      public Task<List<Author>> FetchAll()
-      {
-         var authors = Task.FromResult(_dapperService.GetAll<Author>
-             ($"SELECT Id, FName + ' ' + LName As Name FROM " +
-             $"[Author] ORDER BY FName; ", null,
-             commandType: CommandType.Text));
-         return authors;
-      }
-      */
+
       public Task<List<Author>> ListAll(int skip, int take,
              string orderBy, string direction = "DESC", 
              string search = "")
