@@ -11,7 +11,6 @@ namespace BookApp.Interfaces
       Task<int> Update(Author author);
       Task<int> Delete(int Id);
       Task<int> Count(string search);
-      //Task<List<Author>> FetchAll();
       Task<List<Author>> ListAll(int skip,
                                  int take,
                                  string orderBy,
