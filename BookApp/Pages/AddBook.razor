@@ -1,4 +1,4 @@
-﻿@page "/addBook"
+@page "/addBook"
 @inject IBookService bookService
 @inject IPublisherService publisherService
 @inject IBookAuthorService bookAuthorService
@@ -96,7 +96,7 @@
             <td>
                &#8194;
                <a class="btn btn-primary"
-                  href='/addPublisher/@book.ISBN/0'>Add publisher</a>
+                  href='/addPublisher/0'>Add publisher</a>
             </td>
          </tr>
          <tr>
@@ -128,7 +128,6 @@
 
    protected override async Task OnInitializedAsync()
    {
-      //book.PubYear = (short)DateTime.Now.Year;
       book.PurchDate = DateTime.Now;      
       publishers = await publisherService.FetchAll();
    }
